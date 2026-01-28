@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">8</defaultcontrol>
+    <controls>
+        <!-- Background -->
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>$INFO[ListItem.Art(fanart)]</texture>
+            <aspectratio>scale</aspectratio>
+            <fadetime>400</fadetime>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>backgrounds/overlay-gradient.png</texture>
+            <colordiffuse>C0000000</colordiffuse>
+        </control>
+        
+        <!-- Content -->
+        <control type="group">
+            <left>60</left>
+            <top>60</top>
+            <width>1800</width>
+            <height>960</height>
+            
+            <!-- Poster -->
+            <control type="image">
+                <left>0</left>
+                <top>0</top>
+                <width>400</width>
+                <height>600</height>
+                <texture>$INFO[ListItem.Art(poster)]</texture>
+                <aspectratio>keep</aspectratio>
+                <bordertexture colordiffuse="accent">borders/border-poster.png</bordertexture>
+                <bordersize>6</bordersize>
+            </control>
+            
+            <!-- Info -->
+            <control type="group">
+                <left>440</left>
+                <top>0</top>
+                <width>1360</width>
+                <height>600</height>
+                
+                <!-- Title -->
+                <control type="label">
+                    <width>1360</width>
+                    <height>60</height>
+                    <font>font30</font>
+                    <textcolor>text_main</textcolor>
+                    <label>$INFO[ListItem.Title]</label>
+                </control>
+                
+                <!-- Year, Rating, Duration -->
+                <control type="grouplist">
+                    <top>70</top>
+                    <width>1360</width>
+                    <height>40</height>
+                    <orientation>horizontal</orientation>
+                    <itemgap>20</itemgap>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>40</height>
+                        <font>font14</font>
+                        <textcolor>text_alt</textcolor>
+                        <label>$INFO[ListItem.Year]</label>
+                    </control>
+                    <control type="image">
+                        <width>2</width>
+                        <height>20</height>
+                        <texture>common/separator-vertical.png</texture>
+                        <colordiffuse>text_alt</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>40</height>
+                        <font>font14</font>
+                        <textcolor>text_alt</textcolor>
+                        <label>$INFO[ListItem.Rating]</label>
+                    </control>
+                    <control type="image">
+                        <width>2</width>
+                        <height>20</height>
+                        <texture>common/separator-vertical.png</texture>
+                        <colordiffuse>text_alt</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <width>auto</width>
+                        <height>40</height>
+                        <font>font14</font>
+                        <textcolor>text_alt</textcolor>
+                        <label>$INFO[ListItem.Duration(mins), min]</label>
+                    </control>
+                </control>
+                
+                <!-- Genre -->
+                <control type="label">
+                    <top>120</top>
+                    <width>1360</width>
+                    <height>40</height>
+                    <font>font14</font>
+                    <textcolor>accent</textcolor>
+                    <label>$INFO[ListItem.Genre]</label>
+                </control>
+                
+                <!-- Plot -->
+                <control type="textbox">
+                    <top>180</top>
+                    <width>1360</width>
+                    <height>200</height>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <label>$INFO[ListItem.Plot]</label>
+                    <autoscroll delay="5000" time="3000" repeat="5000">true</autoscroll>
+                </control>
+                
+                <!-- Buttons -->
+                <control type="grouplist" id="9000">
+                    <top>400</top>
+                    <width>1360</width>
+                    <height>60</height>
+                    <orientation>horizontal</orientation>
+                    <itemgap>20</itemgap>
+                    <control type="button" id="8">
+                        <width>200</width>
+                        <height>60</height>
+                        <label>Play</label>
+                        <font>font14_title</font>
+                        <textcolor>text_main</textcolor>
+                        <focusedcolor>accent</focusedcolor>
+                        <texturefocus colordiffuse="accent">buttons/button-focus.png</texturefocus>
+                        <texturenofocus colordiffuse="40FFFFFF">buttons/button-nofocus.png</texturenofocus>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                    </control>
+                    <control type="button" id="9">
+                        <width>200</width>
+                        <height>60</height>
+                        <label>Trailer</label>
+                        <font>font14_title</font>
+                        <textcolor>text_main</textcolor>
+                        <focusedcolor>accent</focusedcolor>
+                        <texturefocus colordiffuse="accent">buttons/button-focus.png</texturefocus>
+                        <texturenofocus colordiffuse="40FFFFFF">buttons/button-nofocus.png</texturenofocus>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                    </control>
+                    <control type="button" id="10">
+                        <width>200</width>
+                        <height>60</height>
+                        <label>Add to List</label>
+                        <font>font14_title</font>
+                        <textcolor>text_main</textcolor>
+                        <focusedcolor>accent</focusedcolor>
+                        <texturefocus colordiffuse="accent">buttons/button-focus.png</texturefocus>
+                        <texturenofocus colordiffuse="40FFFFFF">buttons/button-nofocus.png</texturenofocus>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                    </control>
+                </control>
+            </control>
+            
+            <!-- Cast & Crew -->
+            <control type="group">
+                <top>640</top>
+                <width>1800</width>
+                <height>320</height>
+                <control type="label">
+                    <width>1800</width>
+                    <height>40</height>
+                    <font>font16</font>
+                    <textcolor>text_main</textcolor>
+                    <label>Cast & Crew</label>
+                </control>
+                <control type="panel" id="50">
+                    <top>50</top>
+                    <width>1800</width>
+                    <height>270</height>
+                    <orientation>horizontal</orientation>
+                    <scrolltime tween="cubic" easing="out">300</scrolltime>
+                    <itemlayout width="180" height="270">
+                        <control type="image">
+                            <width>180</width>
+                            <height>180</height>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <aspectratio>keep</aspectratio>
+                            <bordersize>4</bordersize>
+                        </control>
+                        <control type="label">
+                            <top>190</top>
+                            <width>180</width>
+                            <height>30</height>
+                            <font>font12</font>
+                            <textcolor>text_main</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>center</align>
+                        </control>
+                        <control type="label">
+                            <top>220</top>
+                            <width>180</width>
+                            <height>30</height>
+                            <font>font10</font>
+                            <textcolor>text_alt</textcolor>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <align>center</align>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout width="180" height="270">
+                        <control type="group">
+                            <animation effect="zoom" start="100" end="105" time="200" tween="cubic" easing="out" center="auto">Focus</animation>
+                            <control type="image">
+                                <width>180</width>
+                                <height>180</height>
+                                <texture>$INFO[ListItem.Icon]</texture>
+                                <aspectratio>keep</aspectratio>
+                                <bordertexture colordiffuse="accent">borders/border-actor.png</bordertexture>
+                                <bordersize>4</bordersize>
+                            </control>
+                            <control type="label">
+                                <top>190</top>
+                                <width>180</width>
+                                <height>30</height>
+                                <font>font12</font>
+                                <textcolor>accent</textcolor>
+                                <label>$INFO[ListItem.Label]</label>
+                                <align>center</align>
+                            </control>
+                            <control type="label">
+                                <top>220</top>
+                                <width>180</width>
+                                <height>30</height>
+                                <font>font10</font>
+                                <textcolor>text_alt</textcolor>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <align>center</align>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                    <content>$VAR[CastAndCrewContent]</content>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

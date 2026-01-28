@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.futuristictv"
+  version="1.0.0"
+  name="FuturisticTV"
+  provider-name="YourName">
+  <requires>
+    <import addon="xbmc.gui" version="5.15.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    debugging="false"
+    effectslowdown="0.75">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="xml" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A modern futuristic skin inspired by Google TV UI</summary>
+    <description lang="en_GB">FuturisticTV is a clean, modern skin with a futuristic design inspired by Google TV, featuring semi-transparent geometric backgrounds and a streamlined user experience.</description>
+    <platform>all</platform>
+    <license>GNU General Public License version 2</license>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+      <screenshot>resources/screenshot-01.jpg</screenshot>
+      <screenshot>resources/screenshot-02.jpg</screenshot>
+      <screenshot>resources/screenshot-03.jpg</screenshot>
+    </assets>
+  </extension>
+</addon>

@@ -1,0 +1,124 @@
+.home-content {
+  padding: 1rem 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.last-update {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.card-link {
+  display: block;
+}
+
+.glass-card {
+  padding: 1.5rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.card-badge.playing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.playing-title {
+  color: var(--text-main);
+  margin-top: 0.25rem;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--border-radius-round);
+  background-color: rgba(50, 50, 70, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-info {
+  margin-top: auto;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  transition: text-shadow var(--transition-normal);
+}
+
+.card-link:hover .card-title {
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.card-subtitle {
+  color: var(--text-secondary);
+}
+
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.time-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.time-large {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.date {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .time-large {
+    font-size: 3rem;
+  }
+}

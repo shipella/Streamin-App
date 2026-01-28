@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-glow: rgba(120, 119, 198, 0.35);
+  --secondary-glow: rgba(255, 122, 89, 0.35);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-bg: rgba(30, 30, 46, 0.6);
+  --highlight: #ff7a59;
+}
+
+* {
+  cursor: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #0f0f17;
+  color: white;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 0 20px var(--primary-glow);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Glowing Elements */
+.glow-text {
+  text-shadow: 0 0 10px var(--primary-glow);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.glow-highlight {
+  box-shadow: 0 0 20px var(--highlight);
+}
+
+/* Selector Animation */
+.selector {
+  position: relative;
+}
+
+.selector::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--highlight), transparent);
+  animation: glow-pulse 2s infinite;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    box-shadow: 0 0 5px var(--highlight);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 15px var(--highlight), 0 0 30px var(--highlight);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Animated Background */
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.animated-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(30, 30, 46, 0.8) 0%, rgba(15, 15, 23, 0.9) 100%);
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button Glow Effect */
+.glow-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.glow-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--primary-glow), var(--secondary-glow), var(--primary-glow));
+  background-size: 400%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glow-button:hover::before {
+  opacity: 1;
+  animation: glowing 3s linear infinite;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Live Badge Animation */
+.live-badge {
+  background-color: #ff3b30;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+  height: 3px;
+  background: linear-gradient(90deg, var(--highlight) 0%, rgba(255, 122, 89, 0.5) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: progress-shine 2s infinite linear;
+}
+
+@keyframes progress-shine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

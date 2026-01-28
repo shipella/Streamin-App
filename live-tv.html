@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live TV - MI IPTV</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/live-tv.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <header class="main-header">
+        <div class="logo">
+            <a href="index.html">
+                <span class="logo-text">MI</span>
+                <span class="logo-text-alt">IPTV</span>
+            </a>
+        </div>
+
+        <div class="search-container">
+            <div class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+            <div class="search-input">
+                <input type="text" placeholder="Search">
+                <button class="mic-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <div class="time-weather">
+                <div class="time" id="current-time">12:51</div>
+                <div class="weather">
+                    <img src="images/weather-icon.png" alt="Weather" class="weather-icon">
+                    <span>24°</span>
+                </div>
+            </div>
+
+            <button class="settings-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+            </button>
+
+            <a href="#" class="profile-button">
+                <img src="images/avatar.png" alt="Profile" class="avatar">
+            </a>
+        </div>
+    </header>
+
+    <main class="live-tv-content">
+        <div class="page-header">
+            <a href="index.html" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </a>
+            <h1 class="page-title">Live TV's</h1>
+        </div>
+
+        <div class="live-tv-layout">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="countries-container glass-card">
+                    <div class="countries-header">
+                        <h3>Countries</h3>
+                        <button class="search-countries-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="countries-list">
+                        <div class="country-item">
+                            <img src="images/flags/italy.png" alt="Italy" class="country-flag">
+                            <div class="country-name">Italy</div>
+                        </div>
+                        <div class="country-item active">
+                            <img src="images/flags/ukraine.png" alt="Ukraine" class="country-flag">
+                            <div class="country-name">Ukraine</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/brazil.png" alt="Brazil" class="country-flag">
+                            <div class="country-name">Brazil</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/germany.png" alt="Germany" class="country-flag">
+                            <div class="country-name">Germany</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/usa.png" alt="United States" class="country-flag">
+                            <div class="country-name">United States</div>
+                            <div class="country-channels">447 Channels</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/france.png" alt="France" class="country-flag">
+                            <div class="country-name">France</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/portugal.png" alt="Portugal" class="country-flag">
+                            <div class="country-name">Portugal</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/south-africa.png" alt="South Africa" class="country-flag">
+                            <div class="country-name">South Africa</div>
+                        </div>
+                        <div class="country-item">
+                            <img src="images/flags/china.png" alt="China" class="country-flag">
+                            <div class="country-name">China</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-buttons">
+                    <button class="sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <rect width="20" height="15" x="2" y="7" rx="2" ry="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </button>
+                    <button class="sidebar-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="channels-list">
+                    <a href="player.html" class="channel-card glass-card">
+                        <div class="channel-logo">
+                            <img src="images/channels/natgeo.png" alt="Nat Geo Wild HD">
+                        </div>
+                        <div class="channel-info">
+                            <h3 class="channel-name">Nat Geo Wild HD</h3>
+                            <p class="channel-views">8.2M Views</p>
+                        </div>
+                        <div class="channel-badges">
+                            <span class="badge">HD</span>
+                            <span class="badge">EPG</span>
+                            <button class="favorite-button active">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </a>
+
+                    <div class="channel-card glass-card">
+                        <div class="channel-logo">
+                            <img src="images/channels/disney.png" alt="Disney Channel">
+                        </div>
+                        <div class="channel-info">
+                            <h3 class="channel-name">Disney Channel</h3>
+                            <p class="channel-views">850K Views</p>
+                        </div>
+                        <div class="channel-badges">
+                            <span class="badge">4K</span>
+                            <span class="badge">EPG</span>
+                            <span class="badge">$</span>
+                        </div>
+                    </div>
+
+                    <div class="channel-card glass-card">
+                        <div class="channel-logo">
+                            <img src="images/channels/hbo.png" alt="HBO Family">
+                        </div>
+                        <div class="channel-info">
+                            <h3 class="channel-name">HBO Family</h3>
+                            <p class="channel-views">1.7M Views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="now-playing glass-card">
+                    <div class="now-playing-bg">
+                        <img src="images/leopard-bg.jpg" alt="Now Playing Background">
+                    </div>
+                    <div class="now-playing-content">
+                        <div class="now-playing-label">Now Playing...</div>
+                        <h2 class="now-playing-title">Animals and Nature</h2>
+                        <p class="now-playing-description">
+                            Big cat expert Boone Smith follows a strange trail of carnage and death to track cats in Patagonia. 
+                            He documents their behavior - from kittens to killers.
+                        </p>
+                        <div class="now-playing-progress">
+                            <div class="progress-time">
+                                <span>01:52:37</span>
+                                <span>02:10:46</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/live-tv.js"></script>
+</body>
+</html>

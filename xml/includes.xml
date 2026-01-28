@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <!-- Semi-transparent Hero Geometric Background -->
+    <include name="HeroGeometricBackground">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>backgrounds/hero-geometric.png</texture>
+            <colordiffuse>80FFFFFF</colordiffuse> <!-- Semi-transparent -->
+            <aspectratio>scale</aspectratio>
+            <fadetime>600</fadetime>
+            <animation effect="fade" start="100" end="95" time="3000" pulse="true" condition="true">Conditional</animation>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texture>backgrounds/overlay-gradient.png</texture>
+            <colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+            <aspectratio>stretch</aspectratio>
+        </control>
+    </include>
+    
+    <!-- Google TV Style Card Layout -->
+    <include name="ContentCard">
+        <control type="group">
+            <width>320</width>
+            <height>240</height>
+            <control type="image">
+                <width>320</width>
+                <height>180</height>
+                <texture>$INFO[ListItem.Art(thumb)]</texture>
+                <aspectratio>scale</aspectratio>
+                <bordertexture colordiffuse="$VAR[AccentColor]">borders/border-card.png</bordertexture>
+                <bordersize>4</bordersize>
+            </control>
+            <control type="label">
+                <top>185</top>
+                <width>320</width>
+                <height>30</height>
+                <font>font12</font>
+                <textcolor>text_main</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="label">
+                <top>215</top>
+                <width>320</width>
+                <height>25</height>
+                <font>font10</font>
+                <textcolor>text_alt</textcolor>
+                <label>$INFO[ListItem.Year]</label>
+            </control>
+        </control>
+    </include>
+    
+    <!-- Modern Navigation Bar -->
+    <include name="ModernNavBar">
+        <control type="group">
+            <left>0</left>
+            <bottom>0</bottom>
+            <width>1920</width>
+            <height>90</height>
+            <control type="image">
+                <width>1920</width>
+                <height>90</height>
+                <texture colordiffuse="background">common/bg-gradient-horizontal.png</texture>
+            </control>
+            <control type="grouplist">
+                <orientation>horizontal</orientation>
+                <left>60</left>
+                <width>1800</width>
+                <height>90</height>
+                <itemgap>40</itemgap>
+                <align>center</align>
+                <control type="button" id="100">
+                    <width>160</width>
+                    <height>90</height>
+                    <label>Home</label>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <focusedcolor>accent</focusedcolor>
+                    <texturefocus colordiffuse="accent">icons/home.png</texturefocus>
+                    <texturenofocus colordiffuse="text_alt">icons/home.png</texturenofocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="101">
+                    <width>160</width>
+                    <height>90</height>
+                    <label>Movies</label>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <focusedcolor>accent</focusedcolor>
+                    <texturefocus colordiffuse="accent">icons/movies.png</texturefocus>
+                    <texturenofocus colordiffuse="text_alt">icons/movies.png</texturenofocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="102">
+                    <width>160</width>
+                    <height>90</height>
+                    <label>TV Shows</label>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <focusedcolor>accent</focusedcolor>
+                    <texturefocus colordiffuse="accent">icons/tvshows.png</texturefocus>
+                    <texturenofocus colordiffuse="text_alt">icons/tvshows.png</texturenofocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="103">
+                    <width>160</width>
+                    <height>90</height>
+                    <label>Music</label>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <focusedcolor>accent</focusedcolor>
+                    <texturefocus colordiffuse="accent">icons/music.png</texturefocus>
+                    <texturenofocus colordiffuse="text_alt">icons/music.png</texturenofocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="104">
+                    <width>160</width>
+                    <height>90</height>
+                    <label>Apps</label>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <focusedcolor>accent</focusedcolor>
+                    <texturefocus colordiffuse="accent">icons/apps.png</texturefocus>
+                    <texturenofocus colordiffuse="text_alt">icons/apps.png</texturenofocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+                <control type="button" id="105">
+                    <width>160</width>
+                    <height>90</height>
+                    <label>Settings</label>
+                    <font>font14</font>
+                    <textcolor>text_main</textcolor>
+                    <focusedcolor>accent</focusedcolor>
+                    <texturefocus colordiffuse="accent">icons/settings.png</texturefocus>
+                    <texturenofocus colordiffuse="text_alt">icons/settings.png</texturenofocus>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

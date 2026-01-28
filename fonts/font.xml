@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+    <fontset id="Default" idloc="31390" unicode="true">
+        <!-- Main Fonts -->
+        <font>
+            <name>font10</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>20</size>
+        </font>
+        <font>
+            <name>font12</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>24</size>
+        </font>
+        <font>
+            <name>font13</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>26</size>
+        </font>
+        <font>
+            <name>font14</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font16</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>32</size>
+        </font>
+        <font>
+            <name>font20</name>
+            <filename>Roboto-Regular.ttf</filename>
+            <size>40</size>
+        </font>
+        <font>
+            <name>font30</name>
+            <filename>Roboto-Light.ttf</filename>
+            <size>60</size>
+        </font>
+        
+        <!-- Bold Fonts -->
+        <font>
+            <name>font12_title</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>24</size>
+        </font>
+        <font>
+            <name>font14_title</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>28</size>
+        </font>
+        <font>
+            <name>font24_title</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>48</size>
+        </font>
+        <font>
+            <name>font36_title</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>72</size>
+        </font>
+    </fontset>
+</fonts>
